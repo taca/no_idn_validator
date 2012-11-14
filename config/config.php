@@ -1,7 +1,7 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
- * Copyright (C) 2011
+ * Copyright (C) 2011-2012
  * Takahiro Kambe.  All rights reserved.
  *
  * This program is free software: you can redistribute it and/or
@@ -28,8 +28,6 @@
  */
 
 /*
- * Add more validator with hook.
+ * Add validators with hook.
  */
 $GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('NoIDNvalidator', 'validate');
-
-?>

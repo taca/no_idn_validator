@@ -1,7 +1,7 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
- * Copyright (C) 2011
+ * Copyright (C) 2011-2012
  * Takahiro Kambe.  All rights reserved.
  *
  * This program is free software: you can redistribute it and/or
@@ -19,7 +19,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Takahiro Kambe 2011
+ * @copyright  Takahiro Kambe 2012
  * @author     Takahiro Kambe
  * @package    NoIDN_Validator
  * @license    lgpl3 or later
@@ -28,15 +28,30 @@
  */
 
 /**
+ * Run in a custom namespace, so the class can be replaced
+ */
+namespace Contao;
+
+
+/**
  * Class NoIDNvalidator
  *
- * @copyright  Takahiro Kambe 2011
+ * Add additional validations.
+ * @copyright  Takahiro Kambe 2012
  * @author     Takahiro Kambe 
  * @package    NoIDNvalidator
  */
 
-class NoIDNvalidator extends Frontend
+class NoIDNvalidator extends \Frontend
 {
+    /**
+     * Validate emali and url without handling IDN
+     * @param string $rgxp Type of validation
+     * @param string $varInput String to validate
+     * @param object $widget Widget to store error message
+     *
+     * @return boolean True if validation success
+     */
     function validate($rgxp, $varInput, $widget)
     {
         $status = true;
@@ -44,7 +59,7 @@ class NoIDNvalidator extends Frontend
         switch ($rgxp)
         {
         case 'email-noidn':
-            if (!$widget->isValidEmailAddress($varInput))
+            if (!\Validator::isEmail($varInput))
             {
                 $widget->addError(sprintf($GLOBALS['TL_LANG']['ERR']['email-noidn'], $widget->strLabel));
             }
@@ -65,5 +80,3 @@ class NoIDNvalidator extends Frontend
         return $status;
     }
 }
-
-?>
