@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (C) 2011-2012
+ * Copyright (C) 2011-2013
  * Takahiro Kambe.  All rights reserved.
  *
  * This program is free software: you can redistribute it and/or
@@ -28,6 +28,6 @@
  */
 
 /*
- * Add validators with hook.
+ * Add more validators with hook.
  */
-$GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('NoIDNvalidator', 'validate');
+$GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('Contao\NoIDNvalidator', 'validate');
