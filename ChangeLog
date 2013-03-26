@@ -1,11 +1,13 @@
+2013-03-27  Takahiro Kambe  <tacahi>
+
+	* Update for Contao 3.
+
 2012-11-14  Takahiro Kambe  <tacahi>
 
 	* PHP style: eliminate closing "?>" and preventing direct access
 	  code of first line.
 
 	* Add some document to functions.
-
-	* Switch to supporting Contao 3.
 
 2011-10-29  Takahiro Kambe  <taca>
 
