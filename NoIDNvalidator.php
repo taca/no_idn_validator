@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (C) 2011-2012
+ * Copyright (C) 2011-2013
  * Takahiro Kambe.  All rights reserved.
  *
  * This program is free software: you can redistribute it and/or
@@ -19,30 +19,32 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Takahiro Kambe 2012
+ * @copyright  Takahiro Kambe 2013
  * @author     Takahiro Kambe
  * @package    NoIDN_Validator
  * @license    lgpl3 or later
  * @filesource
- *
  */
 
 /**
- * Run in a custom namespace, so the class can be replaced
+ * Class NoIDNvalidator
+ *
+ * @copyright  Takahiro Kambe 2013
+ * @author     Takahiro Kambe 
+ * @package    NoIDNvalidator
  */
-namespace Contao;
-
 
 /**
  * Class NoIDNvalidator
  *
  * Add additional validations.
- * @copyright  Takahiro Kambe 2012
+ *
+ * @copyright  Takahiro Kambe 2013
  * @author     Takahiro Kambe 
  * @package    NoIDNvalidator
  */
 
-class NoIDNvalidator extends \Frontend
+class NoIDNvalidator extends Frontend
 {
     /**
      * Validate emali and url without handling IDN
@@ -59,13 +61,9 @@ class NoIDNvalidator extends \Frontend
         switch ($rgxp)
         {
         case 'email-noidn':
-            if (!\Validator::isEmail($varInput))
+            if (!preg_match('/^(\w+[!#\$%&\'\*\+\-\/=\?^_`\.\{\|\}~]*)+(?<!\.)@\w+([_\.-]*\w+)*\.[A-Za-z]{2,6}$/', $varInput))
             {
                 $widget->addError(sprintf($GLOBALS['TL_LANG']['ERR']['email-noidn'], $widget->strLabel));
-            }
-            if ($this->rgxp == 'friendly' && $strName != '')
-            {
-                $varInput = $strName . ' [' . $varInput . ']';
             }
             break;
         case 'url-noidn':
