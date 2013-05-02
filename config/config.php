@@ -30,4 +30,4 @@
 /*
  * Add more validators with hook.
  */
-$GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('Contao\NoIDNvalidator', 'validate');
+$GLOBALS['TL_HOOKS']['addCustomRegexp'][] = array('NoIDNvalidator', 'validate');
