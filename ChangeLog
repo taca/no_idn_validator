@@ -1,12 +1,14 @@
-2013-05-03  Takahiro Kambe  <tacahi>
+2013-05-03  Takahiro Kambe  <taca>
+
+	* Release 1.2.0 rc1.
 
 	* Fix remained revert of using name space.
 
-2013-03-27  Takahiro Kambe  <tacahi>
+2013-03-27  Takahiro Kambe  <taca>
 
 	* Support Contao 3.
 
-2012-11-14  Takahiro Kambe  <tacahi>
+2012-11-14  Takahiro Kambe  <taca>
 
 	* PHP style: eliminate closing "?>" and preventing direct access
 	  code of first line.
