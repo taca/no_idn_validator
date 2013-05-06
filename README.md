@@ -24,6 +24,6 @@ instantly.  :-)
 (Yes, I feel it is somewhat negative idea as fo I18N, but sadly it is
 still needed by "the real world" yet.)
 
-# License
+## License
 
 License is the same as Contao Open Source CMS; GNU LGPL 2 or later.
