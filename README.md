@@ -1,13 +1,16 @@
-No IDN validator
+# No IDN validator
 
-						1.1 release
-						2013/03/27 Takahiro Kambe
+## Introduction
 
+No IDN validator is an extension for Contao Open Source CMS.
+
+
+## What is it?
 
 This extension provides two validators to Form generator:
 
-	E-mail address without IDN
-	URL format without IDN
+* E-mail address without IDN
+* URL format without IDN
 
 Theses validators are different from standard "E-mail address" and "URL
 format" in that they don't handle IDN (Internationalizing Domain Names).
@@ -21,6 +24,6 @@ instantly.  :-)
 (Yes, I feel it is somewhat negative idea as fo I18N, but sadly it is
 still needed by "the real world" yet.)
 
-* License
+# License
 
-License is the same as Contao; GNU LGPL 3 or later.
+License is the same as Contao Open Source CMS; GNU LGPL 2 or later.
