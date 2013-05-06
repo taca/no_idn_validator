@@ -5,7 +5,7 @@
 No IDN validatorはContao Open Source CMSの機能拡張です。
 
 
-## 何ができますか?
+## 機能
 
 この機能拡張は二つの入力の検証をフォームジェネレーターに追加します:
 

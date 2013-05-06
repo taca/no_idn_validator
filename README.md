@@ -5,7 +5,7 @@
 No IDN validator is an extension for Contao Open Source CMS.
 
 
-## What is it?
+## Function
 
 This extension provides two validators to Form generator:
 
