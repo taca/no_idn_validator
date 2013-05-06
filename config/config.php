@@ -19,7 +19,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Takahiro Kambe 2011
+ * @copyright  Takahiro Kambe 2013
  * @author     Takahiro Kambe
  * @package    lFormText
  * @license    lgpl3 or later
